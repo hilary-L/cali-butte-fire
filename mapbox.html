@@ -58,7 +58,19 @@
 
 <script>
 L.mapbox.accessToken = 'pk.eyJ1IjoiaG1sZWUiLCJhIjoiY2lsNWw3ZndqMDAwaXVjbHowYWd6aDl1ZyJ9.YxGgQCXILNl84CfO7Gjbgg';
-var map = L.mapbox.map('map').setView([38.2457,-120.6443], 13);
+
+var southWest = L.latLng(38.25,-120.72),
+    northEast = L.latLng(38.3,-120.58),
+    bounds = L.latLngBounds(southWest, northEast);
+
+var map = L.mapbox.map('map', 'mapbox.streets', {
+  maxBounds: bounds,
+  maxZoom: 13,
+  minZoom: 10
+});
+
+map.fitBounds(bounds);
+
 var layers = document.getElementById('menu-ui');
 
 addLayer(L.mapbox.tileLayer('mapbox.satellite'), 'base layer', 1);
