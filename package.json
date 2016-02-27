@@ -1,0 +1,25 @@
+{
+  "name": "cali-butte-fire",
+  "version": "1.0.0",
+  "description": "Comparison of before and after photos of Butte area affected by September 2015 fire.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.4",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onelovelyname/cali-butte-fire.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onelovelyname/cali-butte-fire/issues"
+  },
+  "homepage": "https://github.com/onelovelyname/cali-butte-fire#readme"
+}
