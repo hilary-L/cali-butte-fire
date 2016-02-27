@@ -64,6 +64,7 @@ var layers = document.getElementById('menu-ui');
 addLayer(L.mapbox.tileLayer('mapbox.satellite'), 'base layer', 1);
 addLayer(L.mapbox.tileLayer('hmlee.9g7ta5tz', {format: 'png256'}), 'Before', 2);
 addLayer(L.mapbox.tileLayer('hmlee.40epbfje', {format: 'png256'}), 'After', 3);
+addLayer(L.mapbox.tileLayer('mulloverit.d2ad5a4d', {format: 'png256'}), 'Labels', 4);
 
 function addLayer(layer, name, zIndex) {
     layer
