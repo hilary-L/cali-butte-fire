@@ -15,24 +15,33 @@
 
 
 <style>
+.info-box {
+  position: absolute;
+  z-index: 1;
+  right: 10px;
+  bottom: 10px;
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
 .menu-ui {
-  background:#fff;
   position:absolute;
   top:10px;right:10px;
   z-index:1;
   border-radius:3px;
   width:120px;
-  border:1px solid rgba(0,0,0,0.4);
+  border:1px solid rgba(0,0,0,0.8);
   }
   .menu-ui a {
     font-size:13px;
-    color:#404040;
+    color: white;
     display:block;
     margin:0;padding:0;
     padding:10px;
     text-decoration:none;
     border-bottom:1px solid rgba(0,0,0,0.25);
     text-align:center;
+    background-color: rgba(0, 0, 0, 0.8);
     }
     .menu-ui a:first-child {
       border-radius:3px 3px 0 0;
@@ -42,26 +51,30 @@
       border-radius:0 0 3px 3px;
       }
     .menu-ui a:hover {
-      background:#f8f8f8;
+      background-color: rgba(0, 0, 0, 0.8);
       color:#404040;
       }
     .menu-ui a.active {
-      background:#3887BE;
+      background-color: rgba(0, 0, 0, 0.6);
       color:#FFF;
       }
       .menu-ui a.active:hover {
-        background:#3074a4;
+        background-color: rgba(0, 0, 0, 0.8);
         }
 </style>
 <nav id='menu-ui' class='menu-ui'></nav>
-<div id='map'></div>
+<div id='map'>
+  <div class="info-box">
+    <p>some information goes here</p>
+  </div>
+</div>
 
 <script>
 L.mapbox.accessToken = 'pk.eyJ1IjoiaG1sZWUiLCJhIjoiY2lsNWw3ZndqMDAwaXVjbHowYWd6aDl1ZyJ9.YxGgQCXILNl84CfO7Gjbgg';
 var map = L.mapbox.map('map').setView([38.2457,-120.6443], 13);
 var layers = document.getElementById('menu-ui');
 
-addLayer(L.mapbox.tileLayer('mapbox.satellite'), 'base layer', 1);
+addLayer(L.mapbox.tileLayer('mapbox.satellite'), 'Base Layer', 1);
 addLayer(L.mapbox.tileLayer('hmlee.9g7ta5tz', {format: 'png256'}), 'Before', 2);
 addLayer(L.mapbox.tileLayer('hmlee.40epbfje', {format: 'png256'}), 'After', 3);
 addLayer(L.mapbox.tileLayer('mulloverit.d2ad5a4d', {format: 'png256'}), 'Labels', 4);
