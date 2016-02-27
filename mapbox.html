@@ -58,12 +58,12 @@
 
 <script>
 L.mapbox.accessToken = 'pk.eyJ1IjoiaG1sZWUiLCJhIjoiY2lsNWw3ZndqMDAwaXVjbHowYWd6aDl1ZyJ9.YxGgQCXILNl84CfO7Gjbgg';
-var map = L.mapbox.map('map').setView([38.3273,-120.6968], 13);
+var map = L.mapbox.map('map').setView([38.2457,-120.6443], 13);
 var layers = document.getElementById('menu-ui');
 
 addLayer(L.mapbox.tileLayer('mapbox.satellite'), 'base layer', 1);
-addLayer(L.mapbox.tileLayer('hmlee.12el7qcm', {format: 'png256'}), 'Before', 2);
-addLayer(L.mapbox.tileLayer('hmlee.8d3jroyt', {format: 'png256'}), 'After', 3);
+addLayer(L.mapbox.tileLayer('hmlee.9g7ta5tz', {format: 'png256'}), 'Before', 2);
+addLayer(L.mapbox.tileLayer('hmlee.40epbfje', {format: 'png256'}), 'After', 3);
 
 function addLayer(layer, name, zIndex) {
     layer
