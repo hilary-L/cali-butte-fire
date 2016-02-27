@@ -20,9 +20,17 @@
   z-index: 1;
   right: 10px;
   bottom: 10px;
-  width: 200px;
+  width: 250px;
   background-color: rgba(0, 0, 0, 0.4);
   color: white;
+  border-radius: 8px;
+  padding: 15px;
+
+}
+
+.info-box a {
+  color: white;
+  text-decoration: underline;
 }
 .menu-ui {
   position:absolute;
@@ -65,7 +73,7 @@
 <nav id='menu-ui' class='menu-ui'></nav>
 <div id='map'>
   <div class="info-box">
-    <p>some information goes here</p>
+    <p>This demo shows an area in Northern California that was affected by the 2015 Butte Fire. An area of 70,868 acres was burned between September 9 and October 1 of last year, during one of the most expensive wildfires in California history. The Before and After images, collected by <a href="http://www.blackbridge.com/">Blackbridge</a> and acquired from the <a href="https://www.planet.com/">Planet Labs API</a>, were captured on Aug 24, 2015 (Before) and Sept 23, 2015 (After). Images were processed with <a href="https://github.com/mapbox/rasterio">Rasterio</a>, map interactivity was created with the <a href="https://www.mapbox.com/developers/api/">Mapbox API</a>, and this site is hosted on <a href="https://www.heroku.com/">Heroku</a>.</p>
   </div>
 </div>
 
